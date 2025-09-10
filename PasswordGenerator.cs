@@ -18,7 +18,7 @@ namespace FortiPass
             string retString = "";
 
             // the number of special/upper characters, and numbers, impliment later
-            byte numUpper,numSpecial, numNumbers;
+            //byte numUpper,numSpecial, numNumbers;
 
             // Checks to see if user wants, uppercase characters, special characters or numbers
             if (useUpper)
@@ -33,7 +33,13 @@ namespace FortiPass
             {
                 allowedChars += @"!@#$%^&*";
             }
-            while( length < 8 || length >= 255 ) { length = (byte)( length % 16 ); }
+            byte n = 0;
+            while( length < 8 || length > 255 ) {
+
+                if( n > 200 ) { length = 16; break; }
+                length = (byte)( length % 16 );
+                n++;
+            }
 
             string allowedCharsCopy = allowedChars;
 

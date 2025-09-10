@@ -8,7 +8,7 @@ namespace FortiPass
 {
     internal class EmailGenerator
     {
-        public static string GenerateEmail(byte length, bool useUpper, bool useNum, bool useSpecial, string suffix ) {
+        public static string GenerateEmail( byte length, bool useUpper, bool useNum, bool useSpecial, string suffix ) {
             // declare a string of characters to use in the returned string
             string allowedChars = "abcdefghijklmnopqrstuvwxyz";
 
@@ -16,7 +16,7 @@ namespace FortiPass
             string retString = "";
 
             // the number of special/upper characters, and numbers, impliment later
-            byte numUpper, numSpecial, numNumbers;
+            //byte numUpper, numSpecial, numNumbers;
 
             // Checks to see if user wants, uppercase characters, special characters or numbers
             if( useUpper ) {
@@ -28,7 +28,14 @@ namespace FortiPass
             if( useSpecial ) {
                 allowedChars += @"!#$%&'*+-/=?^_\";
             }
-            while( length < 8 || length >= 255 ) { length = (byte)( length % 16 ); }
+            byte n = 0;
+            while( length < 8 || length > 255 ) {
+                
+                if (n > 200 ) { length = 16; break; }
+                length = (byte)( length % 16 );
+                n++;
+            }
+
 
             string allowedCharsCopy = allowedChars;
 
@@ -48,8 +55,9 @@ namespace FortiPass
                 else {
                     retString += letterToAdd;
                 }
-                retString += suffix;
-                return retString;
             }
+            retString += suffix;
+            return retString;
+        }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FortiPass
 {
-    partial class Form1
+    partial class FortiPass
     {
         /// <summary>
         /// Required designer variable.
@@ -41,6 +41,12 @@
             this.txtPasswordLength = new System.Windows.Forms.TextBox();
             this.lblUserNameLength = new System.Windows.Forms.Label();
             this.lblPasswordLength = new System.Windows.Forms.Label();
+            this.lblEmailSuffix = new System.Windows.Forms.Label();
+            this.txtEmailSuffix = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.optionsEmail = new System.Windows.Forms.CheckedListBox();
+            this.btnGenerateEmail = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnExit
@@ -55,14 +61,14 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(228, 276);
+            this.txtPassword.Location = new System.Drawing.Point(228, 310);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(227, 20);
             this.txtPassword.TabIndex = 2;
             // 
             // btnGeneratePassword
             // 
-            this.btnGeneratePassword.Location = new System.Drawing.Point(498, 274);
+            this.btnGeneratePassword.Location = new System.Drawing.Point(498, 361);
             this.btnGeneratePassword.Name = "btnGeneratePassword";
             this.btnGeneratePassword.Size = new System.Drawing.Size(75, 23);
             this.btnGeneratePassword.TabIndex = 3;
@@ -77,7 +83,7 @@
             "Use Uppercase Letters",
             "Use Numbers",
             "Use Special Characters"});
-            this.optionsPassword.Location = new System.Drawing.Point(228, 302);
+            this.optionsPassword.Location = new System.Drawing.Point(228, 335);
             this.optionsPassword.Name = "optionsPassword";
             this.optionsPassword.Size = new System.Drawing.Size(165, 49);
             this.optionsPassword.TabIndex = 4;
@@ -85,7 +91,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(225, 260);
+            this.lblPassword.Location = new System.Drawing.Point(225, 293);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(53, 13);
             this.lblPassword.TabIndex = 5;
@@ -94,7 +100,7 @@
             // lblUserName
             // 
             this.lblUserName.AutoSize = true;
-            this.lblUserName.Location = new System.Drawing.Point(225, 134);
+            this.lblUserName.Location = new System.Drawing.Point(225, 189);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.Size = new System.Drawing.Size(55, 13);
             this.lblUserName.TabIndex = 9;
@@ -107,14 +113,14 @@
             "Use Uppercase Letters",
             "Use Numbers",
             "Use Special Characters"});
-            this.optionsUserName.Location = new System.Drawing.Point(228, 176);
+            this.optionsUserName.Location = new System.Drawing.Point(228, 231);
             this.optionsUserName.Name = "optionsUserName";
             this.optionsUserName.Size = new System.Drawing.Size(165, 49);
             this.optionsUserName.TabIndex = 8;
             // 
             // btnGenerateUserName
             // 
-            this.btnGenerateUserName.Location = new System.Drawing.Point(498, 148);
+            this.btnGenerateUserName.Location = new System.Drawing.Point(498, 257);
             this.btnGenerateUserName.Name = "btnGenerateUserName";
             this.btnGenerateUserName.Size = new System.Drawing.Size(75, 23);
             this.btnGenerateUserName.TabIndex = 7;
@@ -124,29 +130,31 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(228, 150);
+            this.txtUserName.Location = new System.Drawing.Point(228, 205);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(227, 20);
             this.txtUserName.TabIndex = 6;
             // 
             // txtUserNameLength
             // 
-            this.txtUserNameLength.Location = new System.Drawing.Point(399, 205);
+            this.txtUserNameLength.Location = new System.Drawing.Point(399, 260);
             this.txtUserNameLength.Name = "txtUserNameLength";
             this.txtUserNameLength.Size = new System.Drawing.Size(88, 20);
             this.txtUserNameLength.TabIndex = 10;
+            this.txtUserNameLength.Text = "8";
             // 
             // txtPasswordLength
             // 
-            this.txtPasswordLength.Location = new System.Drawing.Point(399, 331);
+            this.txtPasswordLength.Location = new System.Drawing.Point(399, 364);
             this.txtPasswordLength.Name = "txtPasswordLength";
             this.txtPasswordLength.Size = new System.Drawing.Size(88, 20);
             this.txtPasswordLength.TabIndex = 11;
+            this.txtPasswordLength.Text = "8";
             // 
             // lblUserNameLength
             // 
             this.lblUserNameLength.AutoSize = true;
-            this.lblUserNameLength.Location = new System.Drawing.Point(396, 189);
+            this.lblUserNameLength.Location = new System.Drawing.Point(396, 244);
             this.lblUserNameLength.Name = "lblUserNameLength";
             this.lblUserNameLength.Size = new System.Drawing.Size(91, 13);
             this.lblUserNameLength.TabIndex = 12;
@@ -155,17 +163,78 @@
             // lblPasswordLength
             // 
             this.lblPasswordLength.AutoSize = true;
-            this.lblPasswordLength.Location = new System.Drawing.Point(399, 315);
+            this.lblPasswordLength.Location = new System.Drawing.Point(399, 348);
             this.lblPasswordLength.Name = "lblPasswordLength";
             this.lblPasswordLength.Size = new System.Drawing.Size(89, 13);
             this.lblPasswordLength.TabIndex = 13;
             this.lblPasswordLength.Text = "Password Length";
             // 
-            // Form1
+            // lblEmailSuffix
+            // 
+            this.lblEmailSuffix.AutoSize = true;
+            this.lblEmailSuffix.Location = new System.Drawing.Point(396, 120);
+            this.lblEmailSuffix.Name = "lblEmailSuffix";
+            this.lblEmailSuffix.Size = new System.Drawing.Size(61, 13);
+            this.lblEmailSuffix.TabIndex = 19;
+            this.lblEmailSuffix.Text = "Email Suffix";
+            // 
+            // txtEmailSuffix
+            // 
+            this.txtEmailSuffix.Location = new System.Drawing.Point(399, 136);
+            this.txtEmailSuffix.Name = "txtEmailSuffix";
+            this.txtEmailSuffix.Size = new System.Drawing.Size(88, 20);
+            this.txtEmailSuffix.TabIndex = 18;
+            this.txtEmailSuffix.Text = "@gmail.com";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(225, 65);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(32, 13);
+            this.lblEmail.TabIndex = 17;
+            this.lblEmail.Text = "Email";
+            // 
+            // optionsEmail
+            // 
+            this.optionsEmail.FormattingEnabled = true;
+            this.optionsEmail.Items.AddRange(new object[] {
+            "Use Uppercase Letters",
+            "Use Numbers",
+            "Use Special Characters"});
+            this.optionsEmail.Location = new System.Drawing.Point(228, 107);
+            this.optionsEmail.Name = "optionsEmail";
+            this.optionsEmail.Size = new System.Drawing.Size(165, 49);
+            this.optionsEmail.TabIndex = 16;
+            // 
+            // btnGenerateEmail
+            // 
+            this.btnGenerateEmail.Location = new System.Drawing.Point(498, 133);
+            this.btnGenerateEmail.Name = "btnGenerateEmail";
+            this.btnGenerateEmail.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerateEmail.TabIndex = 15;
+            this.btnGenerateEmail.Text = "Generate";
+            this.btnGenerateEmail.UseVisualStyleBackColor = true;
+            this.btnGenerateEmail.Click += new System.EventHandler(this.btnGenerateEmail_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(228, 81);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(227, 20);
+            this.txtEmail.TabIndex = 14;
+            // 
+            // FortiPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblEmailSuffix);
+            this.Controls.Add(this.txtEmailSuffix);
+            this.Controls.Add(this.lblEmail);
+            this.Controls.Add(this.optionsEmail);
+            this.Controls.Add(this.btnGenerateEmail);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblPasswordLength);
             this.Controls.Add(this.lblUserNameLength);
             this.Controls.Add(this.txtPasswordLength);
@@ -179,8 +248,8 @@
             this.Controls.Add(this.btnGeneratePassword);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnExit);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FortiPass";
+            this.Text = "FortiPass";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,6 +270,12 @@
         private System.Windows.Forms.TextBox txtPasswordLength;
         private System.Windows.Forms.Label lblUserNameLength;
         private System.Windows.Forms.Label lblPasswordLength;
+        private System.Windows.Forms.Label lblEmailSuffix;
+        private System.Windows.Forms.TextBox txtEmailSuffix;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.CheckedListBox optionsEmail;
+        private System.Windows.Forms.Button btnGenerateEmail;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
 
