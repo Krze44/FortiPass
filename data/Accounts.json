@@ -1,0 +1,34 @@
+{
+  "Accounts": {
+    "Netflix": {
+      "Company": "Netflix",
+      "Email": "asdfasdfasdf@gmail.com",
+      "Username": "UT#7dkF^",
+      "Password": "!FMvFz^5"
+    },
+    "aksdjfaskd": {
+      "Company": "aksdjfaskd",
+      "Email": "x9yIfKk-ZiI#?MmKU&^P@gmail.com",
+      "Username": "evxWNKqC",
+      "Password": "4QouSChG"
+    },
+    "dfsdfgsdfaSXCV": {
+      "Company": "dfsdfgsdfaSXCV",
+      "Email": "AnEIEBZOvZ@gmail.com",
+      "Username": "k7J9QVIn9rz0$kP5",
+      "Password": "Zj!NjIt0"
+    },
+    "jhkjsdanmzxcmnjhasdgjh": {
+      "Company": "jhkjsdanmzxcmnjhasdgjh",
+      "Email": "8XplXUZABDAdQ0hEbh@gmail.com",
+      "Username": "jQaTUUsa",
+      "Password": "L6gM9hRu"
+    },
+    "Hulu": {
+      "Company": "Hulu",
+      "Email": "SampleEmail123@gmail.com",
+      "Username": "Sampleuser123",
+      "Password": "SamplePassword123"
+    }
+  }
+}
