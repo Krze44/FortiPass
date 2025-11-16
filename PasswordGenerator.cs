@@ -34,12 +34,6 @@ namespace FortiPass
                 allowedChars += @"!@#$%^&*";
             }
             byte n = 0;
-            while( length < 8 || length > 255 ) {
-
-                if( n > 200 ) { length = 16; break; }
-                length = (byte)( length % 16 );
-                n++;
-            }
 
             string allowedCharsCopy = allowedChars;
 
