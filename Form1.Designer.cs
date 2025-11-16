@@ -37,6 +37,11 @@
             this.btnAddAccount = new System.Windows.Forms.Button();
             this.btnViewAccount = new System.Windows.Forms.Button();
             this.pageViewer = new System.Windows.Forms.TabControl();
+            this.tabLogin = new System.Windows.Forms.TabPage();
+            this.btnForgotPassword = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.txtMasterPassword = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.accountCreation = new System.Windows.Forms.TabPage();
             this.btnAccountCreate = new System.Windows.Forms.Button();
             this.lblCompany = new System.Windows.Forms.Label();
@@ -71,18 +76,13 @@
             this.accountView = new System.Windows.Forms.TabPage();
             this.accountTable = new System.Windows.Forms.DataGridView();
             this.lblNav = new System.Windows.Forms.Label();
-            this.tabLogin = new System.Windows.Forms.TabPage();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtMasterPassword = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
-            this.btnForgotPassword = new System.Windows.Forms.Button();
             btnCreateAccount = new System.Windows.Forms.Button();
             this.pageViewer.SuspendLayout();
+            this.tabLogin.SuspendLayout();
             this.accountCreation.SuspendLayout();
             this.accountAdd.SuspendLayout();
             this.accountView.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accountTable)).BeginInit();
-            this.tabLogin.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCreateAccount
@@ -97,7 +97,7 @@
             btnCreateAccount.TabIndex = 20;
             btnCreateAccount.Text = "Create";
             btnCreateAccount.UseVisualStyleBackColor = false;
-            btnCreateAccount.Click += new System.EventHandler(this.button1_Click);
+            btnCreateAccount.Click += new System.EventHandler(this.btnAccountCreate_Click);
             // 
             // btnExit
             // 
@@ -156,6 +156,70 @@
             this.pageViewer.Size = new System.Drawing.Size(912, 508);
             this.pageViewer.TabIndex = 24;
             this.pageViewer.SelectedIndexChanged += new System.EventHandler(this.pageViewer_SelectedIndexChanged);
+            // 
+            // tabLogin
+            // 
+            this.tabLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.tabLogin.Controls.Add(this.btnForgotPassword);
+            this.tabLogin.Controls.Add(this.btnLogin);
+            this.tabLogin.Controls.Add(this.txtMasterPassword);
+            this.tabLogin.Controls.Add(this.label4);
+            this.tabLogin.Location = new System.Drawing.Point(4, 29);
+            this.tabLogin.Name = "tabLogin";
+            this.tabLogin.Padding = new System.Windows.Forms.Padding(3);
+            this.tabLogin.Size = new System.Drawing.Size(904, 475);
+            this.tabLogin.TabIndex = 3;
+            this.tabLogin.Text = "Login";
+            // 
+            // btnForgotPassword
+            // 
+            this.btnForgotPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(130)))), ((int)(((byte)(131)))));
+            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPassword.ForeColor = System.Drawing.Color.Black;
+            this.btnForgotPassword.Location = new System.Drawing.Point(551, 305);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(134, 49);
+            this.btnForgotPassword.TabIndex = 27;
+            this.btnForgotPassword.Text = "Forgot Password";
+            this.btnForgotPassword.UseVisualStyleBackColor = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(130)))), ((int)(((byte)(131)))));
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.Color.Black;
+            this.btnLogin.Location = new System.Drawing.Point(248, 303);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(134, 49);
+            this.btnLogin.TabIndex = 26;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // txtMasterPassword
+            // 
+            this.txtMasterPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
+            this.txtMasterPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMasterPassword.ForeColor = System.Drawing.Color.White;
+            this.txtMasterPassword.Location = new System.Drawing.Point(246, 224);
+            this.txtMasterPassword.MaximumSize = new System.Drawing.Size(439, 30);
+            this.txtMasterPassword.MinimumSize = new System.Drawing.Size(439, 30);
+            this.txtMasterPassword.Name = "txtMasterPassword";
+            this.txtMasterPassword.Size = new System.Drawing.Size(439, 15);
+            this.txtMasterPassword.TabIndex = 1;
+            this.txtMasterPassword.UseSystemPasswordChar = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(241, 185);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(320, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Enter Your Master Password:";
             // 
             // accountCreation
             // 
@@ -219,7 +283,7 @@
             this.txtCompany.MaximumSize = new System.Drawing.Size(500, 30);
             this.txtCompany.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtCompany.Name = "txtCompany";
-            this.txtCompany.Size = new System.Drawing.Size(227, 22);
+            this.txtCompany.Size = new System.Drawing.Size(227, 15);
             this.txtCompany.TabIndex = 38;
             // 
             // lblEmailSuffix
@@ -240,7 +304,7 @@
             this.txtEmailSuffix.MaximumSize = new System.Drawing.Size(88, 27);
             this.txtEmailSuffix.MinimumSize = new System.Drawing.Size(88, 19);
             this.txtEmailSuffix.Name = "txtEmailSuffix";
-            this.txtEmailSuffix.Size = new System.Drawing.Size(88, 19);
+            this.txtEmailSuffix.Size = new System.Drawing.Size(88, 15);
             this.txtEmailSuffix.TabIndex = 36;
             this.txtEmailSuffix.Text = "@gmail.com";
             // 
@@ -277,7 +341,7 @@
             this.txtEmail.MaximumSize = new System.Drawing.Size(500, 30);
             this.txtEmail.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(227, 22);
+            this.txtEmail.Size = new System.Drawing.Size(227, 15);
             this.txtEmail.TabIndex = 32;
             // 
             // lblPasswordLength
@@ -307,7 +371,7 @@
             this.txtPasswordLength.MaximumSize = new System.Drawing.Size(88, 25);
             this.txtPasswordLength.MinimumSize = new System.Drawing.Size(88, 18);
             this.txtPasswordLength.Name = "txtPasswordLength";
-            this.txtPasswordLength.Size = new System.Drawing.Size(88, 18);
+            this.txtPasswordLength.Size = new System.Drawing.Size(88, 15);
             this.txtPasswordLength.TabIndex = 29;
             this.txtPasswordLength.Text = "8";
             // 
@@ -320,7 +384,7 @@
             this.txtUserNameLength.MaximumSize = new System.Drawing.Size(88, 25);
             this.txtUserNameLength.MinimumSize = new System.Drawing.Size(88, 18);
             this.txtUserNameLength.Name = "txtUserNameLength";
-            this.txtUserNameLength.Size = new System.Drawing.Size(88, 18);
+            this.txtUserNameLength.Size = new System.Drawing.Size(88, 15);
             this.txtUserNameLength.TabIndex = 28;
             this.txtUserNameLength.Text = "8";
             // 
@@ -357,7 +421,7 @@
             this.txtUserName.MaximumSize = new System.Drawing.Size(500, 30);
             this.txtUserName.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(227, 22);
+            this.txtUserName.Size = new System.Drawing.Size(227, 15);
             this.txtUserName.TabIndex = 24;
             // 
             // lblPassword
@@ -393,7 +457,7 @@
             this.txtPassword.MaximumSize = new System.Drawing.Size(500, 30);
             this.txtPassword.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(227, 22);
+            this.txtPassword.Size = new System.Drawing.Size(227, 15);
             this.txtPassword.TabIndex = 20;
             // 
             // accountAdd
@@ -449,7 +513,7 @@
             this.txtAddCompany.MaximumSize = new System.Drawing.Size(500, 30);
             this.txtAddCompany.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtAddCompany.Name = "txtAddCompany";
-            this.txtAddCompany.Size = new System.Drawing.Size(227, 22);
+            this.txtAddCompany.Size = new System.Drawing.Size(227, 15);
             this.txtAddCompany.TabIndex = 56;
             // 
             // label2
@@ -470,7 +534,7 @@
             this.txtAddEmailSuffix.MaximumSize = new System.Drawing.Size(100, 30);
             this.txtAddEmailSuffix.MinimumSize = new System.Drawing.Size(88, 22);
             this.txtAddEmailSuffix.Name = "txtAddEmailSuffix";
-            this.txtAddEmailSuffix.Size = new System.Drawing.Size(88, 22);
+            this.txtAddEmailSuffix.Size = new System.Drawing.Size(88, 15);
             this.txtAddEmailSuffix.TabIndex = 54;
             this.txtAddEmailSuffix.Text = "@gmail.com";
             // 
@@ -511,7 +575,7 @@
             this.txtAddUsername.MaximumSize = new System.Drawing.Size(500, 30);
             this.txtAddUsername.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtAddUsername.Name = "txtAddUsername";
-            this.txtAddUsername.Size = new System.Drawing.Size(227, 22);
+            this.txtAddUsername.Size = new System.Drawing.Size(227, 15);
             this.txtAddUsername.TabIndex = 44;
             // 
             // label7
@@ -532,7 +596,7 @@
             this.txtAddPassword.MaximumSize = new System.Drawing.Size(500, 30);
             this.txtAddPassword.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtAddPassword.Name = "txtAddPassword";
-            this.txtAddPassword.Size = new System.Drawing.Size(227, 22);
+            this.txtAddPassword.Size = new System.Drawing.Size(227, 15);
             this.txtAddPassword.TabIndex = 41;
             this.txtAddPassword.UseSystemPasswordChar = true;
             // 
@@ -596,70 +660,6 @@
             this.lblNav.TabIndex = 25;
             this.lblNav.Text = "Nav Menu";
             // 
-            // tabLogin
-            // 
-            this.tabLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.tabLogin.Controls.Add(this.btnForgotPassword);
-            this.tabLogin.Controls.Add(this.btnLogin);
-            this.tabLogin.Controls.Add(this.txtMasterPassword);
-            this.tabLogin.Controls.Add(this.label4);
-            this.tabLogin.Location = new System.Drawing.Point(4, 29);
-            this.tabLogin.Name = "tabLogin";
-            this.tabLogin.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLogin.Size = new System.Drawing.Size(904, 475);
-            this.tabLogin.TabIndex = 3;
-            this.tabLogin.Text = "Login";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(241, 185);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(320, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Enter Your Master Password:";
-            // 
-            // txtMasterPassword
-            // 
-            this.txtMasterPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(139)))), ((int)(((byte)(139)))), ((int)(((byte)(139)))));
-            this.txtMasterPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMasterPassword.ForeColor = System.Drawing.Color.White;
-            this.txtMasterPassword.Location = new System.Drawing.Point(246, 224);
-            this.txtMasterPassword.MaximumSize = new System.Drawing.Size(439, 30);
-            this.txtMasterPassword.MinimumSize = new System.Drawing.Size(439, 30);
-            this.txtMasterPassword.Name = "txtMasterPassword";
-            this.txtMasterPassword.Size = new System.Drawing.Size(439, 30);
-            this.txtMasterPassword.TabIndex = 1;
-            this.txtMasterPassword.UseSystemPasswordChar = true;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(130)))), ((int)(((byte)(131)))));
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.Color.Black;
-            this.btnLogin.Location = new System.Drawing.Point(248, 303);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(134, 49);
-            this.btnLogin.TabIndex = 26;
-            this.btnLogin.Text = "Login";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // btnForgotPassword
-            // 
-            this.btnForgotPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(130)))), ((int)(((byte)(131)))));
-            this.btnForgotPassword.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnForgotPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForgotPassword.ForeColor = System.Drawing.Color.Black;
-            this.btnForgotPassword.Location = new System.Drawing.Point(551, 305);
-            this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(134, 49);
-            this.btnForgotPassword.TabIndex = 27;
-            this.btnForgotPassword.Text = "Forgot Password";
-            this.btnForgotPassword.UseVisualStyleBackColor = false;
-            // 
             // FortiPass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -676,14 +676,14 @@
             this.Name = "FortiPass";
             this.Text = "FortiPass";
             this.pageViewer.ResumeLayout(false);
+            this.tabLogin.ResumeLayout(false);
+            this.tabLogin.PerformLayout();
             this.accountCreation.ResumeLayout(false);
             this.accountCreation.PerformLayout();
             this.accountAdd.ResumeLayout(false);
             this.accountAdd.PerformLayout();
             this.accountView.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accountTable)).EndInit();
-            this.tabLogin.ResumeLayout(false);
-            this.tabLogin.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
