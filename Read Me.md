@@ -13,3 +13,5 @@ Fill in a company name i.e Netflix, username, email associated if any, and your 
 click the "Add Account" button and it will write your info to the Accounts.json file
 
 click the "view" button, to view a table of all of your accounts
+
+if anything breaks, i.e cant log in, go into config.ini and delete the text from masterpassword=, and leave a trailing whitespace, same with Salt=, set IsFirstTimeUser = true or IsFirstTimeUser = True
