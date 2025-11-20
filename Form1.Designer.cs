@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.Button btnCreateAccount;
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
             this.btnViewAccount = new System.Windows.Forms.Button();
@@ -94,7 +94,7 @@
             btnCreateAccount.Location = new System.Drawing.Point(293, 51);
             btnCreateAccount.Name = "btnCreateAccount";
             btnCreateAccount.Size = new System.Drawing.Size(136, 49);
-            btnCreateAccount.TabIndex = 20;
+            btnCreateAccount.TabIndex = 14;
             btnCreateAccount.Text = "Create";
             btnCreateAccount.UseVisualStyleBackColor = false;
             btnCreateAccount.Click += new System.EventHandler(this.btnAccountCreate_Click);
@@ -108,7 +108,7 @@
             this.btnExit.Location = new System.Drawing.Point(862, 620);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(134, 49);
-            this.btnExit.TabIndex = 0;
+            this.btnExit.TabIndex = 20;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -122,7 +122,7 @@
             this.btnAddAccount.Location = new System.Drawing.Point(435, 51);
             this.btnAddAccount.Name = "btnAddAccount";
             this.btnAddAccount.Size = new System.Drawing.Size(136, 49);
-            this.btnAddAccount.TabIndex = 21;
+            this.btnAddAccount.TabIndex = 15;
             this.btnAddAccount.Text = "Add";
             this.btnAddAccount.UseVisualStyleBackColor = false;
             this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
@@ -136,7 +136,7 @@
             this.btnViewAccount.Location = new System.Drawing.Point(577, 51);
             this.btnViewAccount.Name = "btnViewAccount";
             this.btnViewAccount.Size = new System.Drawing.Size(138, 49);
-            this.btnViewAccount.TabIndex = 22;
+            this.btnViewAccount.TabIndex = 16;
             this.btnViewAccount.Text = "View";
             this.btnViewAccount.UseVisualStyleBackColor = false;
             this.btnViewAccount.Click += new System.EventHandler(this.btnViewAccount_Click);
@@ -260,10 +260,10 @@
             this.btnAccountCreate.Location = new System.Drawing.Point(778, 424);
             this.btnAccountCreate.Name = "btnAccountCreate";
             this.btnAccountCreate.Size = new System.Drawing.Size(108, 40);
-            this.btnAccountCreate.TabIndex = 40;
+            this.btnAccountCreate.TabIndex = 7;
             this.btnAccountCreate.Text = "Generate Account";
             this.btnAccountCreate.UseVisualStyleBackColor = false;
-            this.btnAccountCreate.Click += new System.EventHandler(this.btnAccountCreate_Click);
+            this.btnAccountCreate.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // lblCompany
             // 
@@ -284,7 +284,7 @@
             this.txtCompany.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtCompany.Name = "txtCompany";
             this.txtCompany.Size = new System.Drawing.Size(227, 15);
-            this.txtCompany.TabIndex = 38;
+            this.txtCompany.TabIndex = 0;
             // 
             // lblEmailSuffix
             // 
@@ -305,7 +305,7 @@
             this.txtEmailSuffix.MinimumSize = new System.Drawing.Size(88, 19);
             this.txtEmailSuffix.Name = "txtEmailSuffix";
             this.txtEmailSuffix.Size = new System.Drawing.Size(88, 15);
-            this.txtEmailSuffix.TabIndex = 36;
+            this.txtEmailSuffix.TabIndex = 2;
             this.txtEmailSuffix.Text = "@gmail.com";
             // 
             // lblEmail
@@ -342,7 +342,7 @@
             this.txtEmail.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(227, 15);
-            this.txtEmail.TabIndex = 32;
+            this.txtEmail.TabIndex = 1;
             // 
             // lblPasswordLength
             // 
@@ -372,7 +372,7 @@
             this.txtPasswordLength.MinimumSize = new System.Drawing.Size(88, 18);
             this.txtPasswordLength.Name = "txtPasswordLength";
             this.txtPasswordLength.Size = new System.Drawing.Size(88, 15);
-            this.txtPasswordLength.TabIndex = 29;
+            this.txtPasswordLength.TabIndex = 6;
             this.txtPasswordLength.Text = "8";
             // 
             // txtUserNameLength
@@ -385,7 +385,7 @@
             this.txtUserNameLength.MinimumSize = new System.Drawing.Size(88, 18);
             this.txtUserNameLength.Name = "txtUserNameLength";
             this.txtUserNameLength.Size = new System.Drawing.Size(88, 15);
-            this.txtUserNameLength.TabIndex = 28;
+            this.txtUserNameLength.TabIndex = 4;
             this.txtUserNameLength.Text = "8";
             // 
             // lblUserName
@@ -422,7 +422,7 @@
             this.txtUserName.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(227, 15);
-            this.txtUserName.TabIndex = 24;
+            this.txtUserName.TabIndex = 3;
             // 
             // lblPassword
             // 
@@ -458,7 +458,7 @@
             this.txtPassword.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(227, 15);
-            this.txtPassword.TabIndex = 20;
+            this.txtPassword.TabIndex = 5;
             // 
             // accountAdd
             // 
@@ -490,7 +490,7 @@
             this.btnAddExistingAccount.Location = new System.Drawing.Point(750, 401);
             this.btnAddExistingAccount.Name = "btnAddExistingAccount";
             this.btnAddExistingAccount.Size = new System.Drawing.Size(120, 44);
-            this.btnAddExistingAccount.TabIndex = 58;
+            this.btnAddExistingAccount.TabIndex = 13;
             this.btnAddExistingAccount.Text = "Add Account";
             this.btnAddExistingAccount.UseVisualStyleBackColor = false;
             this.btnAddExistingAccount.Click += new System.EventHandler(this.btnAddExistingAccount_Click);
@@ -514,7 +514,7 @@
             this.txtAddCompany.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtAddCompany.Name = "txtAddCompany";
             this.txtAddCompany.Size = new System.Drawing.Size(227, 15);
-            this.txtAddCompany.TabIndex = 56;
+            this.txtAddCompany.TabIndex = 8;
             // 
             // label2
             // 
@@ -535,7 +535,7 @@
             this.txtAddEmailSuffix.MinimumSize = new System.Drawing.Size(88, 22);
             this.txtAddEmailSuffix.Name = "txtAddEmailSuffix";
             this.txtAddEmailSuffix.Size = new System.Drawing.Size(88, 15);
-            this.txtAddEmailSuffix.TabIndex = 54;
+            this.txtAddEmailSuffix.TabIndex = 10;
             this.txtAddEmailSuffix.Text = "@gmail.com";
             // 
             // label3
@@ -555,7 +555,7 @@
             this.txtAddEmail.Location = new System.Drawing.Point(328, 163);
             this.txtAddEmail.Name = "txtAddEmail";
             this.txtAddEmail.Size = new System.Drawing.Size(227, 22);
-            this.txtAddEmail.TabIndex = 51;
+            this.txtAddEmail.TabIndex = 9;
             // 
             // label6
             // 
@@ -576,7 +576,7 @@
             this.txtAddUsername.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtAddUsername.Name = "txtAddUsername";
             this.txtAddUsername.Size = new System.Drawing.Size(227, 15);
-            this.txtAddUsername.TabIndex = 44;
+            this.txtAddUsername.TabIndex = 11;
             // 
             // label7
             // 
@@ -597,7 +597,7 @@
             this.txtAddPassword.MinimumSize = new System.Drawing.Size(227, 22);
             this.txtAddPassword.Name = "txtAddPassword";
             this.txtAddPassword.Size = new System.Drawing.Size(227, 15);
-            this.txtAddPassword.TabIndex = 41;
+            this.txtAddPassword.TabIndex = 12;
             this.txtAddPassword.UseSystemPasswordChar = true;
             // 
             // accountView
@@ -614,39 +614,39 @@
             // 
             this.accountTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.accountTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.accountTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.accountTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.accountTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.accountTable.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.accountTable.DefaultCellStyle = dataGridViewCellStyle10;
             this.accountTable.EnableHeadersVisualStyles = false;
             this.accountTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(160)))), ((int)(((byte)(161)))));
             this.accountTable.Location = new System.Drawing.Point(109, 38);
             this.accountTable.Name = "accountTable";
             this.accountTable.ReadOnly = true;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.accountTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.accountTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.accountTable.RowHeadersVisible = false;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.accountTable.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.accountTable.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.accountTable.Size = new System.Drawing.Size(703, 412);
             this.accountTable.TabIndex = 0;
             // 

@@ -259,13 +259,7 @@ namespace FortiPass
         }
 
         private void btnAccountCreate_Click( object sender, EventArgs e ) {
-            // show account creation tab if logged in
-            if( user.IsLoggedIn ) {
-                pageViewer.SelectedTab = accountCreation;
-            }
-            else {
-                MessageBox.Show("Please login first!");
-            }
+
         }
         // Refresh account table on tab change
         private void pageViewer_SelectedIndexChanged( object sender, EventArgs e ) {
@@ -300,6 +294,9 @@ namespace FortiPass
             account.Company = company;
             // read existing json
             string jsonText = File.ReadAllText(@"..\..\data\accounts.json");
+            if( jsonText.Contains(company) ) {
+                company += "_" + DateTime.Now.Ticks.ToString();
+            }
             AccountRoot data = JsonConvert.DeserializeObject<AccountRoot>(jsonText);
             // add new account
             data.Accounts[ company ] = account;
@@ -310,10 +307,10 @@ namespace FortiPass
             MessageBox.Show($"Account for {company} Added successfully");
             Thread.Sleep(100);
             // clear fields
-            txtPassword.Text = string.Empty;
-            txtUserName.Text = string.Empty;
-            txtEmail.Text = string.Empty;
-            txtCompany.Text = string.Empty;
+            txtAddPassword.Text = string.Empty;
+            txtAddUsername.Text = string.Empty;
+            txtAddEmail.Text = string.Empty;
+            txtAddCompany.Text = string.Empty;
         }
 
         private void btnLogin_Click( object sender, EventArgs e ) {
@@ -379,6 +376,51 @@ namespace FortiPass
                 txtMasterPassword.Text = string.Empty;
             }
             
+        }
+
+        private void btnCreateAccount_Click( object sender, EventArgs e ) {
+            // get data from fields
+            string email = GenerateEmail();
+            string password = GeneratePassword();
+            string username = GenerateUsername();
+            string company = txtCompany.Text;
+            // display generated data
+            txtEmail.Text = email;
+            txtUserName.Text = username;
+            txtPassword.Text = password;
+            // encrypt password
+            string cipheredPassword = Encrypt(password, user.privateKey);
+            // create account object
+            Account account = new Account();
+            account.Email = email;
+            // Dont forget to save the encrypted password
+            account.Password = cipheredPassword;
+            account.Username = username;
+            account.Company = company;
+            // read existing json
+            string jsonText = File.ReadAllText(@"..\..\data\accounts.json");
+            if (jsonText.Contains(company)) {
+                company += "_"+ DateTime.Now.Ticks.ToString();
+            }
+            AccountRoot data = JsonConvert.DeserializeObject<AccountRoot>(jsonText);
+            // add new account
+            data.Accounts[ company ] = account;
+            // serialize back to json
+            string updatedJson = JsonConvert.SerializeObject(data, Formatting.Indented);
+            // save to file
+            File.WriteAllText(@"..\..\data\accounts.json", updatedJson);
+            MessageBox.Show($"Account for {company} created successfully!");
+            Thread.Sleep(100);
+            // clear fields
+            txtPassword.Text = string.Empty;
+            txtUserName.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtCompany.Text = string.Empty;
+            for (int i = 0; i < 3; i++ ) {
+                optionsPassword.SetItemChecked(i, false);
+                optionsUserName.SetItemChecked(i, false);
+                optionsEmail.SetItemChecked(i, false);
+            }
         }
     }
 }
